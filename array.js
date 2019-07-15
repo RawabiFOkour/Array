@@ -12,7 +12,9 @@ Correct the syntax error
  'the','fox' 'over' lazy, 'dog',  ]
 
 */
-
+var arr =[ 1 ,7 ,9 ,45];
+var string=["Str", "alex","moh"];
+var str1=['the','fox', 'over', 'lazy', 'dog' ];
 
 /*
 2
@@ -20,7 +22,8 @@ What the index of "Banana","Tomato"
 var fruits=["Tomato","Banana","Watermelon"]
 
 */
-
+//fruits[1]; // Banana
+//fruits[0];//Tomato
 
 /*
 3
@@ -29,8 +32,9 @@ Create an array represents your:
 2- Favorite Sport (3)
 3- Favorite Movie (4)
 */
-
-
+var Food =["apple","banana","orange","makmorah","mansaf"];
+var Sport=["football","tennis" ,"basketball"];
+var Movie=["interstreller", "la casa de papel", "scarymovie","final destenation"];
 /*
 4
 Create a function called firstOfArray
@@ -41,7 +45,11 @@ Ex: firstOfArray([1,4,5]) => 1
 Ex: firstOfArray(["t","u","g","x"]) => "t"
 */
 
-
+function firstOfArray(arr) {
+   return arr[0];
+}
+console.log(firstOfArray([1,4,5]));
+console.log(firstOfArray(["t","u","g","x"]));
 /*
 5
 Create a function called lastOfArray
@@ -51,8 +59,11 @@ and return the first element in an array
 Ex: lastOfArray([1,4,5]) => 5
 Ex: lastOfArray(["t","u","g","x"]) => "x"
 */
-
-
+function lastOfArray(arr1) {
+   return arr1[arr1.length-1];
+}
+console.log(lastOfArray([1,4,5]));
+console.log(lastOfArray(["t","u","g","x"]));
 /*
 6
 Using console make this array to be like this one (push, unshift, shift, pop)
@@ -60,7 +71,19 @@ Using console make this array to be like this one (push, unshift, shift, pop)
 var array = [0,5,7,9]
 => [1,3,4,6,8,9,10]
 */
-
+var array = [0,5,7,9]
+console.log(array.shift());
+console.log(array.shift());
+console.log(array.shift());
+console.log(array);
+console.log(array.unshift(8));
+console.log(array.unshift(6));
+console.log(array.unshift(4));
+console.log(array.unshift(3));
+console.log(array.unshift(1));
+console.log(array);
+console.log(array.push(10));
+console.log(array);
 
 /*
 7
@@ -68,6 +91,15 @@ Using the console try to figure out what the thing thats (push, unshift, shift, 
 
 var array2 = [5,9,-7,3.5]
 */
+var array2 = [5,9,-7,3.5];
+console.log(array2);
+console.log(array2.push(6));
+console.log(array2.unshift(2));
+console.log(array2.pop());
+console.log(array2.shift());
+console.log(array2);
+
+
 
 
 /*
@@ -80,7 +112,9 @@ and return the two middle elemnt in an array if it is have an even elemnets
 Ex: middleOfArray([1,4,5]) => 4
 Ex: middleOfArray(["t","u","g","x"]) =>"u and g"
 */
-
+function middleOfArray(arr) {
+    
+}
 
 /*
 9
