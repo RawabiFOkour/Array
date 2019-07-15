@@ -12,9 +12,9 @@ Correct the syntax error
  'the','fox' 'over' lazy, 'dog',  ]
 
 */
-var arr =[ 1 ,7 ,9 ,45];
-var string=["Str", "alex","moh"];
-var str1=['the','fox', 'over', 'lazy', 'dog' ];
+var arr = [1, 7, 9, 45];
+var string = ["Str", "alex", "moh"];
+var str1 = ['the', 'fox', 'over', 'lazy', 'dog'];
 
 /*
 2
@@ -32,9 +32,9 @@ Create an array represents your:
 2- Favorite Sport (3)
 3- Favorite Movie (4)
 */
-var Food =["apple","banana","orange","makmorah","mansaf"];
-var Sport=["football","tennis" ,"basketball"];
-var Movie=["interstreller", "la casa de papel", "scarymovie","final destenation"];
+var Food = ["apple", "banana", "orange", "makmorah", "mansaf"];
+var Sport = ["football", "tennis", "basketball"];
+var Movie = ["interstreller", "la casa de papel", "scarymovie", "final destenation"];
 /*
 4
 Create a function called firstOfArray
@@ -46,10 +46,10 @@ Ex: firstOfArray(["t","u","g","x"]) => "t"
 */
 
 function firstOfArray(arr) {
-   return arr[0];
+    return arr[0];
 }
-console.log(firstOfArray([1,4,5]));
-console.log(firstOfArray(["t","u","g","x"]));
+console.log(firstOfArray([1, 4, 5]));
+console.log(firstOfArray(["t", "u", "g", "x"]));
 /*
 5
 Create a function called lastOfArray
@@ -60,10 +60,10 @@ Ex: lastOfArray([1,4,5]) => 5
 Ex: lastOfArray(["t","u","g","x"]) => "x"
 */
 function lastOfArray(arr1) {
-   return arr1[arr1.length-1];
+    return arr1[arr1.length - 1];
 }
-console.log(lastOfArray([1,4,5]));
-console.log(lastOfArray(["t","u","g","x"]));
+console.log(lastOfArray([1, 4, 5]));
+console.log(lastOfArray(["t", "u", "g", "x"]));
 /*
 6
 Using console make this array to be like this one (push, unshift, shift, pop)
@@ -71,7 +71,7 @@ Using console make this array to be like this one (push, unshift, shift, pop)
 var array = [0,5,7,9]
 => [1,3,4,6,8,9,10]
 */
-var array = [0,5,7,9]
+var array = [0, 5, 7, 9]
 console.log(array.shift());
 console.log(array.shift());
 console.log(array.shift());
@@ -91,7 +91,7 @@ Using the console try to figure out what the thing thats (push, unshift, shift, 
 
 var array2 = [5,9,-7,3.5]
 */
-var array2 = [5,9,-7,3.5];
+var array2 = [5, 9, -7, 3.5];
 console.log(array2);
 console.log(array2.push(6));
 console.log(array2.unshift(2));
@@ -113,9 +113,18 @@ Ex: middleOfArray([1,4,5]) => 4
 Ex: middleOfArray(["t","u","g","x"]) =>"u and g"
 */
 function middleOfArray(arr) {
-    
+    if (arr.length % 2 === 0) {
+        var mid1 = (arr.length) / 2;
+        var mid2 = mid1 - 1;
+        return arr[mid2] + " and " + arr[mid1];
+    }
+    else {
+        var mid = (arr.length - 1) / 2;
+        return arr[mid];
+    }
 }
-
+console.log(middleOfArray([2, 4, 9]));
+console.log(middleOfArray([2, 4, 5, 9, 8, 10]));
 /*
 9
 Using assignment operator (=)
@@ -128,8 +137,11 @@ animals; => ['zebra', 'elephant']
 var nums= [1,2,3,8,9]
 nums => [5,-22,3.5,44,98,44]
 */
-
-
+var animals = ['cat', 'ele', 'bird'];
+animals[0] = 'zebra';
+animals[1] = 'elephant';
+animals[2] = '';
+console.log(animals.slice(0, -1));
 /*
 10
 Create a function called indexOfArray
@@ -143,8 +155,13 @@ Ex: indexOfArray(nums,4) => 9
 
 **try more cases by your self
 */
-
-
+var nums = [1, 2, 3, 8, 9]
+function indexOfArray(nums, index) {
+    return nums[index];
+}
+console.log(indexOfArray(nums, 3));
+console.log(indexOfArray(nums, 1));
+console.log(indexOfArray(nums, 4));
 /*
 11
 Create a function called arrayExceptLast
@@ -156,8 +173,12 @@ Ex: arrayExceptLast(nums) =>  [1,2,3,8]
 
 **try more cases by your self
 */
-
-
+var nums = [1, 2, 3, 8, 9]
+function arrayExceptLast(nums) {
+    nums.pop();
+    return nums;
+}
+console.log(arrayExceptLast(nums));
 /*
 12
 Create a function called addToEnd
@@ -169,8 +190,13 @@ Ex: addToEnd(nums,55) =>  [1,2,3,8,55]
 
 **try more cases by your self
 */
-
-
+var nums = [1, 2, 3, 8, 9];
+function addToEnd(nums, value) {
+    nums.pop();
+    nums.push(value);
+    return nums;
+}
+console.log(addToEnd(nums, 55));
 // all the exercises below should solved 2 times: 1- for loop 2- while lopp
 /*
 13
@@ -186,6 +212,32 @@ Ex: sumArray(nums) => 23
 */
 
 
+//using for loop
+var nums = [1, 2, 3, 8, 9];
+function nsumArrayame(nums) {
+    var sum = 0;
+    for (var index = 0; index < nums.length; index++) {
+        sum = sum + nums[index];
+    }
+    return sum;
+}
+console.log(nsumArrayame(nums));
+
+
+//using while loop
+var nums = [1, 2, 3, 8, 9];
+function nsumArrayame(nums) {
+    var sum = 0;
+    var index = 0;
+    while (index < nums.length) {
+        sum = sum + nums[index];
+        index++;
+    }
+    return sum;
+}
+console.log(nsumArrayame(nums));
+
+
 /*
 14
 Create a function called minInArray
@@ -198,8 +250,42 @@ Ex: minInArray(nums) => 1
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+/**/
 
 
+//using for loop
+var minArray = [1, 2, 3, 8, 9];
+function minInArray(minArray) {
+    var max = Infinity;
+    for (var indexI = 0; indexI < minArray.length; indexI++) {
+
+        if (minArray[indexI] < max) {
+
+            max = minArray[indexI];
+
+        }
+    }
+    return max;
+}
+console.log(minInArray(minArray));
+
+
+
+//using while loop
+var minArray = [1, 2, 3, 8, 9];
+function minInArray(minArray) {
+    var max = Infinity;
+    var indexI = 0;
+    while (indexI < minArray.length) {
+
+        if (minArray[indexI] < max) {
+            max = minArray[indexI];
+        }
+        indexI++
+    }
+    return max;
+}
+console.log(minInArray(minArray));
 /*
 15
 Create a function called removeFromArray
@@ -213,6 +299,37 @@ Ex: minInArray(nums,8) => [1,2,3,9]
 **try more cases by your self
 */
 
+
+
+//using for loop
+var array1 = [1, 2, 3, 8, 9];
+function removeFromArray(array1, number) {
+    for (var i = 0; i < array1.length; i++) {
+
+        if (number === array1[i]) {
+            array1.splice(i, 1);
+        }
+
+    }
+    return array1;
+}
+console.log(removeFromArray(array1, 8));
+
+
+//using while loop
+var array1 = [1, 2, 3, 8, 9];
+function removeFromArray(array1, number) {
+    var i = 0;
+    while (i < array1.length) {
+
+        if (number === array1[i]) {
+            array1.splice(i, 1);
+        }
+        i++;
+    }
+    return array1;
+}
+console.log(removeFromArray(array1, 8));
 
 /*
 16
@@ -228,6 +345,33 @@ Ex: oddArray(nums) => [1,3,9]
 */
 
 
+
+//using for loop
+var r = [1, 2, 3, 8, 9];
+function odddArray(r) {
+    for (var index = 0; index < r.length; index++) {
+        if (r[index] % 2 === 0) {
+            r.splice(index, 1);
+        }
+    }
+    return r;
+}
+console.log(odddArray(r));
+
+//using while loop
+var r = [1, 2, 3, 8, 9];
+function odddArray(r) {
+    var index = 0;
+    while (index < r.length) {
+        if (r[index] % 2 === 0) {
+            r.splice(index, 1);
+        }
+
+        index++;
+    }
+    return r;
+}
+console.log(odddArray(r));
 /*
 17
 Create a function called aveArray
@@ -244,7 +388,36 @@ Ex: aveArray(nums) => 16.6
 **try more cases by your self
 */
 
+//using for loop
+var s = [1, 2, 3, 8, 9];
+function aveArray(s) {
+    var sum = 0;
+    for (var index = 0; index < s.length; index++) {
+        sum = sum + s[index];
+        var avg = sum / s.length;
 
+    }
+    return avg;
+}
+console.log(aveArray(s));
+
+
+
+//using while loop
+var s = [1, 2, 3, 8, 9];
+function aveArray(s) {
+    var sum = 0;
+    var index = 0;
+    while (index < s.length) {
+
+        sum = sum + s[index];
+        var avg = sum / s.length;
+
+        index++;
+    }
+    return avg;
+}
+console.log(aveArray(s));
 /*
 18
 Create a function called shorterInArray
@@ -258,6 +431,42 @@ Ex: shorterInArray(strings) => "alex"
 **try more cases by your self
 */
 
+//using for loop
+var strings = ["alex", "mercer", "madrasa", "rashed2", "emad", "hala"];
+function shortInArray(arrrr) {
+    max = Infinity;
+    var d;
+    var indexI = 0;
+    while (indexI < arrrr.length) {
+
+        if (arrrr[indexI].length < max) {
+
+            max = arrrr[indexI].length;
+            d = arrrr[indexI];
+
+        }
+        indexI++
+    }
+    return d;
+}
+console.log(shortInArray(strings));
+
+
+//using while loop
+var strings = ["alex", "mercer", "madrasa", "rashed2", "emad", "hala"];
+function shortInArray(arrrr) {
+    max = Infinity;
+    var d;
+    for (var indexI = 0; indexI < arrrr.length; indexI++) {
+        if (arrrr[indexI].length < max) {
+
+            max = arrrr[indexI].length;
+            d = arrrr[indexI];
+        }
+    }
+    return d;
+}
+console.log(shortInArray(strings));
 
 /*
 19
@@ -266,13 +475,47 @@ that accept a string and char
 and return the times that this char repeat inside this string
 
 var string= "alex mercer madrasa rashed2 emad hala"
-Ex: repeatChar(string,"a") => 6
+Ex: repeatChar(string,"a") => 8
 Ex: repeatChar(string,"z") => 0
 
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
 
+
+//using for loop
+var string = "alex mercer madrasa rashed2 emad hala";
+function repeatChar(string, s) {
+    counter = 0;
+    for (var index = 0; index < string.length; index++) {
+        if (string[index] === s[0]) {
+            counter++;
+        }
+    }
+    return counter;
+
+}
+console.log(repeatChar(string, "a"));
+console.log(repeatChar(string, "z"));
+
+
+//using while loop
+var string = "alex mercer madrasa rashed2 emad hala";
+function repeatChar(string, s) {
+    counter = 0;
+    var index = 0;
+    while (index < string.length) {
+
+        if (string[index] === s[0]) {
+            counter++;
+        }
+        index++;
+    }
+    return counter;
+
+}
+console.log(repeatChar(string, "a"));
+console.log(repeatChar(string, "z"));
 
 /*
 20
@@ -287,6 +530,34 @@ Ex: evenIndexOddLength(strings) => ["madrasa"]
 **try more cases by your self
 */
 
+//using for loop
+var stringArray = ["alex", "mercer", "madrasa", "rashed2", "emad", "hala"];
+function evenIndexOddLength(stringArray) {
+    var oddarr = [];
+    for (var index = 0; index < stringArray.length; index += 2) {
+
+        if ((stringArray[index].length) % 2 !== 0) {
+            oddarr.push(stringArray[index]);
+        }
+    }
+    return oddarr;
+}
+console.log(evenIndexOddLength(stringArray));
+
+//using while loop
+var stringArray = ["alex", "mercer", "madrasa", "rashed2", "emad", "hala"];
+function evenIndexOddLength(stringArray) {
+    var oddarr = [];
+    var index = 0;
+    while (index < stringArray.length) {
+        if ((stringArray[index].length) % 2 !== 0) {
+            oddarr.push(stringArray[index]);
+        }
+        index += 2;
+    }
+    return oddarr;
+}
+console.log(evenIndexOddLength(stringArray));
 
 /*
 21
@@ -295,13 +566,37 @@ that accept an array of number
 and return a new array that have the elemnt power by the index of it self
 
 var nums= [44, 5, 4, 3, 2, 10]
-Ex: powerElementIndex(nums) => [0, 5, 16, 27, 16, 100000]
+Ex: powerElementIndex(nums) => [1, 5, 16, 27, 16, 100000]
 
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
 
+//using for loop
 
+var numbers = [44, 5, 4, 3, 2, 10];
+function powerElementIndex(numArray) {
+    var newArray = [];
+    for (var index = 0; index < numbers.length; index++) {
+        newArray.push(Math.pow(numbers[index], index));
+    }
+    return newArray;
+}
+console.log(powerElementIndex(numbers));
+
+
+//using while loop
+var numbers = [44, 5, 4, 3, 2, 10];
+function powerElementIndex(numArray) {
+    var newArray = [];
+    var index = 0;
+    while (index < numbers.length) {
+        newArray.push(Math.pow(numbers[index], index));
+        index++;
+    }
+    return newArray;
+}
+console.log(powerElementIndex(numbers));
 /*
 22
 Create a function called evenNumberEvenIndex
@@ -314,3 +609,34 @@ Ex: evenNumberEvenIndex(nums) => [2,8,34]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+
+//using for loop
+var numArr = [5, 2, 2, 1, 8, 66, 55, 77, 34, 9, 55, 1];
+function evenNumberEvenIndex(numArr) {
+    var newArrayNumbers = [];
+    for (var index = 0; index < numArr.length; index += 2) {
+        if (numArr[index] % 2 === 0) {
+            newArrayNumbers.push(numArr[index]);
+        }
+    }
+
+    return newArrayNumbers;
+}
+console.log(evenNumberEvenIndex(numArr));
+
+//using while loop
+
+var numArr = [5, 2, 2, 1, 8, 66, 55, 77, 34, 9, 55, 1];
+function evenNumberEvenIndex(numArr) {
+    var newArrayNumbers = [];
+    var index = 0;
+    while (index < numArr.length) {
+        if (numArr[index] % 2 === 0) {
+            newArrayNumbers.push(numArr[index]);
+        }
+        index += 2;
+    }
+
+    return newArrayNumbers;
+}
+console.log(evenNumberEvenIndex(numArr));
